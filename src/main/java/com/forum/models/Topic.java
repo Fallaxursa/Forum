@@ -27,6 +27,13 @@ public class Topic {
         this.title = title;
     }
 
+    public Topic(User user, String title, String content) {
+        this.user = user;
+        this.title = title;
+        this.content = content;
+
+    }
+
     public long getId() {
         return id;
     }

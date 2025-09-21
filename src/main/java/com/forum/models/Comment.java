@@ -20,6 +20,12 @@ public class Comment {
 
     public Comment() {}
 
+    public Comment(String content, User user, Topic topic) {
+        this.content = content;
+        this.user = user;
+        this.topic = topic;
+    }
+
     public long getId() {
         return id;
     }
