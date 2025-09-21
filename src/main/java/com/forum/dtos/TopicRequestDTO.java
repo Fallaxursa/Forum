@@ -1,7 +1,7 @@
 package com.forum.dtos;
 
 public record TopicRequestDTO(
-        Long id,
+        Long userId,
         String title,
         String content
 ) {}

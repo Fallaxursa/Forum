@@ -40,8 +40,8 @@ public class TopicController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<TopicResponseDTO> updateTopic(@PathVariable Long id, @RequestBody TopicUpdateDTO updatedto) {
-        TopicResponseDTO dto = topicService.updateTopic(id, updatedto);
+    public ResponseEntity<TopicResponseDTO> updateTopic(@PathVariable Long id, @RequestBody TopicUpdateDTO updateDTO) {
+        TopicResponseDTO dto = topicService.updateTopic(id, updateDTO);
         return ResponseEntity.ok(dto);
     }
 
