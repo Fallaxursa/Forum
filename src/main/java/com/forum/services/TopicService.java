@@ -24,7 +24,9 @@ public class TopicService {
     private final TopicMapper topicMapper;
 
     @Autowired
-    public TopicService(TopicRepository topicRepository, UserRepository userRepository, TopicMapper topicMapper) {
+    public TopicService(TopicRepository topicRepository,
+                        UserRepository userRepository,
+                        TopicMapper topicMapper) {
         this.topicRepository = topicRepository;
         this.userRepository = userRepository;
         this.topicMapper = topicMapper;

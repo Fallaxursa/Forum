@@ -17,4 +17,31 @@ public class Comment {
     @ManyToOne
     @JoinColumn(name = "topic_id")
     private Topic topic;
+
+    public Comment() {}
+
+    public long getId() {
+        return id;
+    }
+
+    public String getContent() {
+        return content;
+    }
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public User getUser() {
+        return user;
+    }
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Topic getTopic() {
+        return topic;
+    }
+    public void setTopic(Topic topic) {
+        this.topic = topic;
+    }
 }
