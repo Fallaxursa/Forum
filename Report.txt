@@ -1,0 +1,30 @@
+Project start: 21/09/2025 15:12.
+
+(to save to git do 'git add .' > 'git commit -m "comment here"' > 'git push')
+(to run frontend do 'npm run dev')
+
+I started by looking up all addons i needed for this project as i completely forgot, but after roughly 15 minutes i managed to get all of them and proceeded to make packages for the controllers, services, repositories, models and dtos.
+
+The reason why i added a dtos package was because one of my added objectives was to use dtos in this project because i felt i was lacking in that department and needed to get better at understanding of dtos.
+
+At first i thought out how i was going to make the models but i found out that there were only 3 required models those being: user, topic and comment. i had a bit of trouble in regards to how i was going to make the connections between the user topics and comments and what type of connection was needed.
+
+after making the models i felt confident that the bases for my backend was starting to develop so i continued with the repositories as i found those to be the quickest and easiest to make. I had no issues with that except for forgetting that i needed to make my repositories interfaces instead of classes.(i also started with normal User but later changed that to responseEntity and later changed user to dtos)
+
+using the high of having completed the repositories i began working on the controllers. I noticed fairly quickly that i didn't really know what to put in the controllers so i looked back at previous projects i made and came to the conclusion that at the very least i would need a create, update, delete and login for my user. During that i realized that it might be better to first complete the user fully so i can reference that when making the comment and topic parts of the project. This took me a long time as i needed to think of the little intricacies like remembering when to use @PathVariable or @RequestBody.
+
+Eventually i had succeeded in making a basic controller for my user and continued with the service layer since i didn't really like the red texts that would inevitably show themself.
+
+I imported the needed methods quickly by simply hovering over the red methods in my controller.
+
+The service was by far the hardest as i challenged myself with learning to user dtos and using the correct one was not always as obvious as it may seem, still i managed to add everything i needed and for some reason i didn't test it???
+
+Nonetheless i moved on to the topic after a small pause to enjoy the small victory that was finishing the user part of the backend. The reason why i chose the topic and not the comment is because i cant really have a comment without something to post it on. I was able to progress smoothly as i could reference the user i already made if i forgot how to do something, except for the parts where i needed to add lists. After a long time of searching i found the stream to quickly gather the topics convert them to the dto and return them. Once again i didn't test it for some reason?? can you hear the Chekhov's gun? i sure can...
+
+Moving on i went to what was probably the most difficult part of the backend, comments. so i started with the dtos and mappers because if i dont i cant properly implement the endpoints. It didnt take a long time as i had already doen it twice before. the first time was the most difficult but i slowly grew accustomed to dtos.
+
+With the endpoints it went well enough with only a few rough patches where i was confused with the delete endpoint and what to return but i quickly found a way to use void and return nocontent and build.
+
+After that was finished and i felt confident that it had everything it needed i went to make the service but because i needed to use both user and topic i needed to import and juggle a lot more in my head. this was also a point where i found the @Transaction annotation so i could revert on runtime if an error occurred any time something went wrong, and so i went back to add the annotation where appropriate in the other services.
+
+Only after i finished that did i think to finally test the program to see if it worked but to my dismay my whole screen filled with errors! distraught i went to google to search the meaning behind those evil red texts only to realize a few hours later that it was just because i miss typed the postgres username and password and that i havnt even created the database. 
