@@ -1,8 +1,8 @@
 package com.forum.services;
 
-import com.forum.dtos.UserRequestDTO;
-import com.forum.dtos.UserResponseDTO;
-import com.forum.dtos.UserUpdateDTO;
+import com.forum.dtos.user.UserRequestDTO;
+import com.forum.dtos.user.UserResponseDTO;
+import com.forum.dtos.user.UserUpdateDTO;
 import com.forum.exceptions.UserNotFoundException;
 import com.forum.mappers.UserMapper;
 import com.forum.models.User;

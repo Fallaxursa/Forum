@@ -1,8 +1,8 @@
 package com.forum.mappers;
 
-import com.forum.dtos.UserRequestDTO;
-import com.forum.dtos.UserResponseDTO;
-import com.forum.dtos.UserUpdateDTO;
+import com.forum.dtos.user.UserRequestDTO;
+import com.forum.dtos.user.UserResponseDTO;
+import com.forum.dtos.user.UserUpdateDTO;
 import com.forum.models.User;
 import org.springframework.stereotype.Component;
 

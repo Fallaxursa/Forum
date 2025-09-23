@@ -1,4 +1,4 @@
-package com.forum.dtos;
+package com.forum.dtos.comment;
 
 public record CommentUpdateDTO(
         String content

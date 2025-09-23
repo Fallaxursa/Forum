@@ -1,9 +1,8 @@
 package com.forum.controllers;
 
-import com.forum.dtos.UserRequestDTO;
-import com.forum.dtos.UserResponseDTO;
-import com.forum.dtos.UserUpdateDTO;
-import com.forum.models.User;
+import com.forum.dtos.user.UserRequestDTO;
+import com.forum.dtos.user.UserResponseDTO;
+import com.forum.dtos.user.UserUpdateDTO;
 import com.forum.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

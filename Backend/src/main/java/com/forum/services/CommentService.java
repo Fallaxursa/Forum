@@ -1,8 +1,8 @@
 package com.forum.services;
 
-import com.forum.dtos.CommentRequestDTO;
-import com.forum.dtos.CommentResponseDTO;
-import com.forum.dtos.CommentUpdateDTO;
+import com.forum.dtos.comment.CommentRequestDTO;
+import com.forum.dtos.comment.CommentResponseDTO;
+import com.forum.dtos.comment.CommentUpdateDTO;
 import com.forum.exceptions.CommentNotFoundException;
 import com.forum.exceptions.TopicNotFoundException;
 import com.forum.exceptions.UserNotFoundException;

@@ -7,12 +7,14 @@ import CharacterDetailPage from "./pages/CharacterDetailPage";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 import UserPage from "./pages/UserPage";
+import CreateNewUserPage from "./pages/CreateNewUserPage";
 
 function App() {
   return (
     <Router>
       <Routes>
         {/* <Route path="/aaaa" element={<CharacterList />} /> */}
+        <Route path="/newuser" element={<CreateNewUserPage />} />
         <Route path="/" element={<LoginPage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/users/:userId" element={<UserPage />} />

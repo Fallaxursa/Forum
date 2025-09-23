@@ -1,8 +1,8 @@
 package com.forum.services;
 
-import com.forum.dtos.TopicRequestDTO;
-import com.forum.dtos.TopicResponseDTO;
-import com.forum.dtos.TopicUpdateDTO;
+import com.forum.dtos.topic.TopicRequestDTO;
+import com.forum.dtos.topic.TopicResponseDTO;
+import com.forum.dtos.topic.TopicUpdateDTO;
 import com.forum.exceptions.TopicNotFoundException;
 import com.forum.exceptions.UserNotFoundException;
 import com.forum.mappers.TopicMapper;

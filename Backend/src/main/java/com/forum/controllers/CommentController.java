@@ -1,8 +1,8 @@
 package com.forum.controllers;
 
-import com.forum.dtos.CommentRequestDTO;
-import com.forum.dtos.CommentResponseDTO;
-import com.forum.dtos.CommentUpdateDTO;
+import com.forum.dtos.comment.CommentRequestDTO;
+import com.forum.dtos.comment.CommentResponseDTO;
+import com.forum.dtos.comment.CommentUpdateDTO;
 import com.forum.services.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

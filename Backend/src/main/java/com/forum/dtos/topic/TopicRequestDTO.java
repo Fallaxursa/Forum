@@ -1,4 +1,4 @@
-package com.forum.dtos;
+package com.forum.dtos.topic;
 
 public record TopicRequestDTO(
         Long userId,

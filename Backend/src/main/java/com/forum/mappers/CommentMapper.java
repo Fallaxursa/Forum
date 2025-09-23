@@ -1,8 +1,8 @@
 package com.forum.mappers;
 
-import com.forum.dtos.CommentRequestDTO;
-import com.forum.dtos.CommentResponseDTO;
-import com.forum.dtos.CommentUpdateDTO;
+import com.forum.dtos.comment.CommentRequestDTO;
+import com.forum.dtos.comment.CommentResponseDTO;
+import com.forum.dtos.comment.CommentUpdateDTO;
 import com.forum.models.Comment;
 import com.forum.models.Topic;
 import com.forum.models.User;

@@ -1,8 +1,8 @@
 package com.forum.controllers;
 
-import com.forum.dtos.TopicRequestDTO;
-import com.forum.dtos.TopicResponseDTO;
-import com.forum.dtos.TopicUpdateDTO;
+import com.forum.dtos.topic.TopicRequestDTO;
+import com.forum.dtos.topic.TopicResponseDTO;
+import com.forum.dtos.topic.TopicUpdateDTO;
 import com.forum.services.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
