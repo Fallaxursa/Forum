@@ -2,6 +2,7 @@ import { useMutation } from '@tanstack/react-query'
 import { useState } from 'react';
 import { API_BASE_USER } from "../components/Constants";
 import axios from 'axios';
+import Redirect from '../components/Redirect';
 
 
 const login = async (requestDTO) => {
@@ -15,8 +16,6 @@ const login = async (requestDTO) => {
 export default function LoginPage() {
     const [username, setUsername] = useState('');
 
-
-
     const mutation = useMutation({
         mutationFn: login,
         onSuccess: (data) => {
@@ -29,9 +28,7 @@ export default function LoginPage() {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-            console.log("Aaaaaaaaaaaaaaa")
-            mutation.mutate({username});
-
+        mutation.mutate({username});
     };
 
     return (
@@ -58,7 +55,7 @@ export default function LoginPage() {
                 {mutation.isSuccess && (
                 <>
                     <p>Login successful! Welcome, {mutation.data.username}</p>
-                    <pre>{JSON.stringify(mutation.data, null, 2)}</pre>
+                    <Redirect />
                 </>
                 )}
             </form>

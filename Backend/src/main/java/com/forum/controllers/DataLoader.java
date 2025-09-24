@@ -32,7 +32,8 @@ public class DataLoader {
 
     public void loadTopics() {
         if (topicRepository.count() == 0) {
-            User user = userRepository.findByUsername("greg").orElseThrow();
+//            User user = userRepository.findByUsername("greg").orElseThrow();
+            User user = userRepository.findById(3L).orElseThrow();
             topicRepository.save(new Topic(user, "First topic", "Content here"));
             topicRepository.save(new Topic(user, "Second topic", "content aaaaaaa"));
         }
@@ -40,9 +41,9 @@ public class DataLoader {
 
     public void loadComments() {
         if (commentRepository.count() == 0) {
-            Topic topic = topicRepository.findAll().stream().findFirst().orElseThrow();
-            User user = userRepository.findByUsername("kaas").orElseThrow();
-            commentRepository.save(new Comment("Nice Post cuh", user, topic));
+            Topic topic = topicRepository.findById(1L).orElseThrow();
+            User user = userRepository.findById(2L).orElseThrow();
+            commentRepository.save(new Comment("Nice Post hehe", user, topic));
         }
     }
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import userService from "../services/userService";
 
  const CreateNewUserPage = () => {
     const [username, setUsername] = useState('');
@@ -10,7 +11,7 @@ import { useState } from "react";
     
         try {
             const requestDTO = { username };
-            const user = await createdUser(requestDTO);
+            const user = await userService.createUser(requestDTO);
             setCreatedUser(user);
             setUsername('');
         } catch(err) {
