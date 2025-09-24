@@ -1,6 +1,7 @@
 import axios from "axios";
 import { API_BASE_USER } from "../components/Constants";
 //dont forget to add try catches for errors.
+
 const createUser = async (requestDTO) => {
     const response = await axios.post(`${API_BASE_USER}`, requestDTO);
     return response.data;
