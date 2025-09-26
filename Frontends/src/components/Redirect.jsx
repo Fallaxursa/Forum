@@ -8,7 +8,7 @@ const Redirect = ({ where, message }) => {
  };
 
  return (
-    <button onClick={() => redirectTo(where)}>{message}</button>
+    <button onClick={() => redirectTo(where)} className='rounded-lg border border-transparent px-5 py-2.5 text-base font-medium bg-[#1a1a1a] cursor-pointer transition-colors duration-250 font-soul p-6 hover:bg-[#535bf2]'>{message}</button>
  )
 }
 
