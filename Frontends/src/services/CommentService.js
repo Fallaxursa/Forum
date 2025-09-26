@@ -33,6 +33,7 @@ const getcommentsByTopic = async (topicId) => {
 
 const getCommentByUser = async (userId) => {
     const response = await axios.get(`${API_BASE_COMMENT}/user/${userId}`);
+    return response.data;
 };
 
 export default {

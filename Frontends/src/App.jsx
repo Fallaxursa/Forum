@@ -5,22 +5,27 @@ import HomePage from "./pages/HomePage";
 import UserPage from "./pages/UserPage";
 import CreateNewUserPage from "./pages/CreateNewUserPage";
 import CreateNewTopic from "./pages/CreateNewTopicPage";
+import { UserProvider } from "./components/UserContext";
+
 
 const queryClient = new QueryClient();
 
 function App() {
+
   return (
-    <QueryClientProvider client={queryClient}>
-      <Router>
-        <Routes>
-          <Route path="/newuser" element={<CreateNewUserPage />} />
-            <Route path="/" element={<LoginPage />} />
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/users/:userId" element={<UserPage />} />
-          <Route path="/newtopic" element={<CreateNewTopic />} />
-        </Routes>
-      </Router>
-    </QueryClientProvider>
+    <UserProvider>
+      <QueryClientProvider client={queryClient}>
+        <Router>
+          <Routes>
+            <Route path="/newuser" element={<CreateNewUserPage />} />
+              <Route path="/" element={<LoginPage />} />
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/users/:userId" element={<UserPage />} />
+            <Route path="/newtopic" element={<CreateNewTopic />} />
+          </Routes>
+        </Router>
+      </QueryClientProvider>
+    </UserProvider>
   );
 }
 

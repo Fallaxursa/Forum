@@ -1,8 +1,11 @@
 import { useState } from "react";
 import topicService from "../services/topicService";
+import { useUser } from "../components/UserContext";
+import Redirect from "../components/Redirect";
 
 const CreateNewUserPage = () => {
     const [createdTopic, setCreatedTopic] = useState(null);
+    const { userId, username } = useUser();
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
 
@@ -10,7 +13,7 @@ const CreateNewUserPage = () => {
         e.preventDefault();
 
         try {
-            const requestDTO = { title, content };
+            const requestDTO = { userId, title, content };
               console.log('Request DTO being sent:', JSON.stringify(requestDTO, null, 2));
             const topic = await topicService.createTopic(requestDTO);
             setCreatedTopic(topic);
@@ -40,9 +43,11 @@ const CreateNewUserPage = () => {
             {createdTopic && (
                 <div>
                     <p>id: {createdTopic.id}</p>
-                    {/* <p>user: {createdTopic.usern} </p> */}
+                    <p>user: {createdTopic.username} </p>
                     <p>title: {createdTopic.title}</p>
                     <p>content: {createdTopic.content}</p>
+                    
+                    <Redirect where={"/home"} message={"to home"} />
                 </div>
             )}
         </>

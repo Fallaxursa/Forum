@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { API_BASE_USER } from "../components/Constants";
 import axios from 'axios';
 import Redirect from '../components/Redirect';
-
+import { useUser } from '../components/UserContext';
 
 const login = async (requestDTO) => {
   console.log('loginUser called with username:', requestDTO);
@@ -15,11 +15,14 @@ const login = async (requestDTO) => {
 
 export default function LoginPage() {
     const [username, setUsername] = useState('');
+    const { setUserId, setUsername: setGlobalUsername } = useUser();
 
     const mutation = useMutation({
         mutationFn: login,
         onSuccess: (data) => {
             console.log("Login sucessful: ", data);
+            setUserId(data.id);
+            setUsername(data.username);
         },
         onError: (error) => {
             console.error("Login failed: ", error.response.data.message || error.message);
@@ -55,7 +58,8 @@ export default function LoginPage() {
                 {mutation.isSuccess && (
                 <>
                     <p>Login successful! Welcome, {mutation.data.username}</p>
-                    <Redirect />
+                    <Redirect where={'/home'} message={"home"}/>
+                    <Redirect where={'/newtopic'} message={"newtopic"}/>
                 </>
                 )}
             </form>

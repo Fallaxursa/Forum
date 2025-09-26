@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router';
 
-const Redirect = () => {
+const Redirect = ({ where, message }) => {
  const navigate = useNavigate();
 
  const redirectTo = (path) => {
@@ -8,7 +8,7 @@ const Redirect = () => {
  };
 
  return (
-    <button onClick={() => redirectTo('/home')}>Go</button>
+    <button onClick={() => redirectTo(where)}>{message}</button>
  )
 }
 
